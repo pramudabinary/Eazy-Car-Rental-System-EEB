@@ -1,18 +1,22 @@
-package lk.ijse.spring.dto;
+package lk.ijse.spring.entity;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import org.springframework.data.annotation.Id;
+import org.springframework.data.mongodb.core.mapping.Document;
 
 /**
  * @author Pramuda Liyanage <pramudatharika@gmail.com>
- * @since 12/12/21
+ * @since 12/13/21
  **/
 
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class CustomerDTO {
+@Document
+public class Customer {
+    @Id
     private String id;
     private String full_name;
     private String user_name;
